@@ -1,0 +1,7 @@
+<h1>List of your Google contacts</h1>
+<ul>
+  <% @data.each do |person| %>
+    <li><%= person.name %> | <%= person.family_name %></li>
+  <% end %>
+</ul>
+<p>Find me in app/views/sessions/create.html.erb</p>
