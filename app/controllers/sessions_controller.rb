@@ -5,6 +5,6 @@ class SessionsController < ApplicationController
     user_email = request.env['omniauth.auth'].info.email
     contacts = ::GoogleContactsService.new(token, user_email)
     data = contacts.list_contacts
-    @sorted_data = data.sort_by!(&:name)
+    @sorted_data = data.sort_by!(&:name).uniq
   end
 end
