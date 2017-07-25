@@ -38,7 +38,7 @@ class GoogleContactsService
     entries = get_data['feed']['entry']
     entries.each_with_object([]) do |entry, array|
       next if entry['gd$name'].blank?
-      name, family_name = entry['gd$name']['gd$fullName']['$t'].split(' ')
+      name, family_name = entry['gd$name']['gd$fullName']['$t'].split(' ').map(&:capitalize)
       array << OpenStruct.new(name: name,  family_name: family_name)
     end
   end
