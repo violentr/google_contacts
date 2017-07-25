@@ -15,7 +15,7 @@ class GoogleContactsService
   end
 
   def contacts_path
-    '/m8/feeds/contacts/'+user_email.to_s+'/full?alt=json'
+    '/m8/feeds/contacts/'+user_email.to_s+'/full?alt=json&max-results=500'
   end
 
   def authenticate
