@@ -1,11 +1,10 @@
 <h1>List of your Google contacts</h1>
-  <div>
-    Currentt Page: <%= paginate @sorted_data%>
-  </div>
-  <div class="googleContacts">
-    <ul>
+  <div id="googleContacts">
+    <input type="text" class="search" />
+    <ul class="list">
       <% @sorted_data.each do |person| %>
-        <li><%= person.try(:name) %> | <%= person.try(:family_name) %></li>
+        <li><p class="fullName"><%= person.try(:name) %> | <%= person.try(:family_name) %></p></li>
       <% end %>
     </ul>
+    <ul class="pagination"></li>
   </div>
