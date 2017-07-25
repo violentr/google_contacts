@@ -1,11 +1,11 @@
 <h1>List of your Google contacts</h1>
   <div>
-    Currentt Page: <%= paginate @sorted_data %>
+    Currentt Page: <%= paginate @sorted_data%>
   </div>
   <div class="googleContacts">
     <ul>
       <% @sorted_data.each do |person| %>
-        <li><%= person.name %> | <%= person.family_name %></li>
+        <li><%= person.try(:name) %> | <%= person.try(:family_name) %></li>
       <% end %>
     </ul>
   </div>
