@@ -73,7 +73,7 @@ GEM
     execjs (2.7.0)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.18)
+    ffi (1.14.2)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     hashdiff (0.3.4)
